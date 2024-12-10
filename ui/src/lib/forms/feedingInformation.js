@@ -11,7 +11,7 @@ const feedingInfoFields = {
         xs: 12,
         sm: 14,
         md: 8,
-        lg: 24,
+        lg: 6,
       },
       options: [{ label: 'Well', value: 'Well' }, { label: 'Poorly', value: 'Poorly' }, { label: 'Unable to breastfeed', value: 'Unable to breastfeed'}],
     },
@@ -21,7 +21,7 @@ const feedingInfoFields = {
       label: 'Other feeds introduced below 6 months:',
       type: 'text',
       type: 'radio',
-      validate: yup.string().required('This field is required'),
+      validate: yup.string().required('The food introduced below 6 months'),
       width: {
         xs: 12,
         sm: 12,
@@ -30,7 +30,7 @@ const feedingInfoFields = {
         relevant: (formValues) => formValues.otherFeedsBelowSixMonthsYes === 'Yes',
       },
       options: [{ label: 'Yes', value: 'Yes' }, {label: 'No', value:'No'}],
-      
+      validate: yup.string().required('other feeds are required'),
     },
    
     {
@@ -40,8 +40,8 @@ const feedingInfoFields = {
       validate: yup.string(),
       width: {
         xs: 12,
-        sm: 12,
-        md: 12,
+        sm: 14,
+        md: 8,
         lg: 6,
         options: [{ label: 'Yes', value: 'Yes' }, {label: 'No', value:'No'}]
       },
